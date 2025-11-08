@@ -1,20 +1,15 @@
 ---
 layout: post
-title: Transactions - Reconcile internal transfers (credit card payments)
+title: Transactions - Reconcile credit card payments (internal transfers)
 date: 2025-10-18 10:00:00 -0000
 category: YNAB
 ---
 
 ## Problem
-Reconciling transactions that are two sides of the same transaction (example: from your checking account to your credit card):
+Reconciling two sides of the same transaction (Payment from your checking account to credit card):
 
 ## Solution
 Create one linked transfer transaction (not two separate income/expense entries) so YNAB treats it as money moving between your own accounts, not spending or income.
-
-### Locate both sides
-- In your Checking account register, you should see an outflow, like -$2,000.00, (money leaving your checking).
-- In your Credit card account, you’ll see the inflow, like +$2,000.00, (money arriving to pay down the card).
-- If YNAB imported both automatically, it may have already linked them.
 
 ### Check that YNAB recognizes them as a transfer
 1. Look in the “Payee” column:
@@ -34,6 +29,11 @@ Sometimes YNAB imports them as separate transactions, even with the same amount/
 
 ## Tip
 If you pay your card in full each month, make sure your credit card payment category in YNAB stays green and matches your actual payment. When you transfer funds, YNAB automatically reduces that category and your card balance accordingly — no manual categorizing needed.
+
+### Locate both sides
+- In your Checking account register, you should see an outflow, like -$2,000.00, (money leaving your checking).
+- In your Credit card account, you’ll see the inflow, like +$2,000.00, (money arriving to pay down the card).
+- If YNAB imported both automatically, it may have already linked them.
 
 ## Sources
 - ChatGPT

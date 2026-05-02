@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
-# Welcome
-This page was built with **Jekyll** on **GitHub Pages** — no terminal!
+# Welcome to Software Cheatsheet
+
+Check out the posts below for tech tips and cheatsheets.

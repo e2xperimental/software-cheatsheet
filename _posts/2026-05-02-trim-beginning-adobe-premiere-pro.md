@@ -1,3 +1,12 @@
+---
+layout: post
+title: "How to trim the beginning of a video in adobe premiere pro"
+date: 2026-05-02
+category: Premiere
+---
+
+Your post content here...
+
 # How to trim the beginning of a video in adobe premiere pro
 
 To trim the beginning of a video in Adobe Premiere Pro, the fastest method is to use the **Selection Tool (V)** to click and drag the left edge of the clip inward, or press **Q** with the playhead positioned at the desired start point to perform a ripple trim. 

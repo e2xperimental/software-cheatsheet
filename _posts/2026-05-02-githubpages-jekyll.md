@@ -44,6 +44,11 @@ This page was built with **Jekyll** on **GitHub Pages** — no terminal!
 
 Commit, then refresh your site URL. (Small publishes may also take a few minutes.)
 
+## Frontmatter
+https://jekyllrb.com/docs/front-matter/
+
+## Liquid
+https://jekyllrb.com/docs/liquid/
 
 ## Commenting code in index.md and _config.yml
 

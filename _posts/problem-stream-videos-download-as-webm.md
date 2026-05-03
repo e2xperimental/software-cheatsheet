@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Your Post Title"
+date: 2026-05-02
+---
 Remove pauses and filler words from videos.
 
 Problem: Stream videos download as .webm

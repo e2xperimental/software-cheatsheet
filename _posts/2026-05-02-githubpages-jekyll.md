@@ -23,23 +23,27 @@ category: GitHub
 1. Back on the Code tab, click Add file → Create new file.
 2. Create a file named _config.yml with this content, then Commit changes:
 
+```
 theme: jekyll-theme-minimal
 title: My Site
 description: Hello from GitHub Pages + Jekyll
+```
 
 That theme: line tells Pages to build the site with Jekyll and apply one of GitHub’s built-in themes. You can swap jekyll-theme-minimal for any supported theme later.
 
 3. Create another new file named index.md:
 
+```
 ---
 layout: default
 title: Home
 ---
-
 # Welcome
 This page was built with **Jekyll** on **GitHub Pages** — no terminal!
+```
 
 Commit, then refresh your site URL. (Small publishes may also take a few minutes.)
+
 
 ## Commenting code in index.md and _config.yml
 

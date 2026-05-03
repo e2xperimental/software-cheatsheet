@@ -2,7 +2,7 @@
 layout: post
 title: How to purchase and install a US Mobile international plan on a Pixel 6
 date: 2023-07-26 10:00:00 -0000
-category: Android
+category: "US Mobile"
 ---
 The process of adding a US Mobile international plan to my Pixel 6 was slightly different than their instructions.
 Here's how I did it for an upcoming trip.

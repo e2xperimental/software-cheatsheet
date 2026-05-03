@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Your Post Title"
-date: 2026-05-02
+date: 2025-09-23
+category: Adobe Premiere Pro
 ---
 Remove pauses and filler words from videos.
 

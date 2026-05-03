@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "How to trim the beginning of a video in adobe premiere pro"
-date: 2026-05-02
+date: 2026-05-02 00:00:00 +0000
 category: Premiere
 ---
-
-Your post content here...
 
 # How to trim the beginning of a video in adobe premiere pro
 

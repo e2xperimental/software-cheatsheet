@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Template
+title: Title
 date: 2023-07-26 10:00:00 -0000
-category: Android
+publish: false
 ---
 # Basic writing and formatting syntax
 

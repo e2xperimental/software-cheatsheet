@@ -11,11 +11,9 @@ yt-dlp makes it easy to download a full YouTube video and convert it to MP4 so i
 
 ✅ Basic Command to Download a YouTube Video
 
-yt-dlp "https://www.youtube.com/watch?v=VIDEO_ID"
+`yt-dlp "https://www.youtube.com/watch?v=VIDEO_ID"`
 
 This will download the best combined audio + video format by default. The result might be a .webm or .mkv file — both playable on modern systems like VLC or QuickTime (with recent macOS updates).
-
-But since you asked specifically for MP4, let’s make that happen.
 
 ⸻
 

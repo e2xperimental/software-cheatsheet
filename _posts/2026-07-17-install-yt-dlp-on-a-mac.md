@@ -5,7 +5,7 @@ date: 2026-07-17
 category: Macbook
 ---
 
-Absolutely, Erik! Here’s a friendly, step-by-step guide to installing and using yt-dlp on your MacBook so you can download audio from long YouTube videos — safely, cleanly, and without restrictions.
+yt-dlp lets you download audio and/or video from long YouTube videos — safely, cleanly, and without restrictions.
 
 ⸻
 
@@ -38,11 +38,23 @@ Wait for it to install — it’ll also grab dependencies like Python if needed.
 
 ⸻
 
-✅ Step 3: Download Audio from YouTube
+✅ Step 3: Install ffmpeg using Homebrew on Your Mac.
+
+yt-dlp needs ffmpeg (and its companion ffprobe) to convert the downloaded .webm audio into .mp3 files.
+
+In Terminal, type:
+
+brew install ffmpeg
+
+Let it install — it might take a few minutes. This adds both ffmpeg and ffprobe to your system path, so yt-dlp can find and use them automatically.
+
+⸻
+
+✅ Step 4: Download Audio from YouTube
 
 In Terminal, paste this command, replacing the URL with your video link:
 
-yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=VIDEO_ID
+yt-dlp -x --audio-format mp3 "https://www.youtube.com/watch?v=VIDEO_ID"
 
 This tells yt-dlp to:
 
@@ -60,18 +72,30 @@ This tells yt-dlp to:
 If you want to save to your Downloads folder:
 
 cd ~/Downloads
-yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=VIDEO_ID
+yt-dlp -x --audio-format mp3 "https://www.youtube.com/watch?v=VIDEO_ID"
 
 📝 Rename File Automatically:
 
-yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s" https://www.youtube.com/watch?v=VIDEO_ID
+yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=VIDEO_ID"
 
 🎵 Download Best Quality:
 
-yt-dlp -x --audio-format mp3 --audio-quality 0 https://www.youtube.com/watch?v=VIDEO_ID
+yt-dlp -x --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=VIDEO_ID"
 
 📂 Download a Playlist:
 
-yt-dlp -x --audio-format mp3 https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID
+yt-dlp -x --audio-format mp3 "https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID"
+
+⸻
+
+💡 Clean Up the .webm After Conversion
+
+If you’d like yt-dlp to delete the .webm file after it makes the .mp3, just add:
+
+--audio-quality 0 --keep-video=false
+
+Your full command becomes:
+
+yt-dlp -x --audio-format mp3 --audio-quality 0 --keep-video=false "https://www.youtube.com/watch?v=76dmpJ0FNjs"
 
 ⸻

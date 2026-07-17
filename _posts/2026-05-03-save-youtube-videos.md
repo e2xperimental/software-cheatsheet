@@ -1,87 +1,52 @@
 ---
 layout: post
-title: Save YouTube videos as mp3
+title: Save YouTube videos
 date: 2026-07-17
 category: Macbook
 ---
 
-Online converters often have limits (like a 30-minute cutoff I ran into) so switching to a reliable open-source tool like [yt-dlp](https://github.com/yt-dlp/yt-dlp) gives you full control, supports long videos, and avoids shady ads or broken downloads.
+yt-dlp makes it easy to download a full YouTube video and convert it to MP4 so it plays seamlessly on both Windows and MacBook.
 
 ⸻
 
-✅ What You’ll Use: yt-dlp
+✅ Basic Command to Download a YouTube Video
 
-yt-dlp is a powerful command-line tool, forked from youtube-dl, and it’s actively maintained. It supports downloading just the audio from long YouTube videos, in MP3, M4A, or WebM formats.
+yt-dlp "https://www.youtube.com/watch?v=VIDEO_ID"
 
-⸻
+This will download the best combined audio + video format by default. The result might be a .webm or .mkv file — both playable on modern systems like VLC or QuickTime (with recent macOS updates).
 
-🛠️ Step-by-Step: Install and Use yt-dlp on Windows
-
-1. Download yt-dlp
-
-Go to:
-👉 ⁠https://github.com/yt-dlp/yt-dlp/releases
-
-Scroll down to “Assets” and download:
-
-yt-dlp.exe
-
-Save it somewhere easy, like your Downloads or C:\yt-dlp
-
-2. Open Command Prompt
-
-* Press Win + R, type cmd, press Enter.
-* Navigate to the folder where you saved yt-dlp.exe, e.g.:
-
-cd C:\yt-dlp
-
-3. Download Audio from YouTube
-
-Replace [URL] with the link to the YouTube video.
-
-To get high-quality audio in MP3, run:
-
-yt-dlp.exe -x --audio-format mp3 [URL]
-
-Example:
-
-yt-dlp.exe -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ
-
-This will:
-
-* Download only the audio track
-* Convert it to MP3
-* Save it in the current folder
-
-You can also use:
-
---audio-quality 0
-
-to get the best possible bitrate.
+But since you asked specifically for MP4, let’s make that happen.
 
 ⸻
 
-💡 Pro Tips
+🛠️ Command to Download YouTube Video as MP4
 
-* To specify a download folder, add:
+yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 "https://www.youtube.com/watch?v=VIDEO_ID"
 
--o "C:\Users\YourName\Music\%(title)s.%(ext)s"
+Replace the link with your actual video link, like this:
 
-* To download a whole playlist:
+yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 "https://www.youtube.com/watch?v=76dmpJ0FNjs"
 
-yt-dlp.exe -x --audio-format mp3 https://www.youtube.com/playlist?list=...
+🔍 What This Does:
 
-* To avoid YouTube ads and skips:
-
---no-playlist --no-part
+* -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4: tells it to pick the best quality MP4 video + M4A audio.
+* --merge-output-format mp4: merges them into a single .mp4 file.
+* Compatible with Windows, Mac, iPhone, iPad, etc.
 
 ⸻
 
-❤️ Bonus: Save the Command as a Script
+📂 Optional: Download to a Specific Folder
 
-If you’re doing this often:
+-o "~/Downloads/%(title)s.%(ext)s"
 
-1. Open Notepad.
-2. Paste your yt-dlp command.
-3. Save it as download_audio.bat on your desktop.
-4. Double-click it anytime to start a download!
+This puts it in your Downloads folder with the video title as the filename:
+
+yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 -o "~/Downloads/%(title)s.%(ext)s" "https://www.youtube.com/watch?v=76dmpJ0FNjs"
+
+⸻
+
+💡 Bonus: If the video doesn’t have MP4 streams
+
+If YouTube doesn’t serve an MP4 stream at your requested quality, yt-dlp will fall back to .webm + .m4a, and still convert it into .mp4 using ffmpeg (which you’ve now installed).
+
+⸻

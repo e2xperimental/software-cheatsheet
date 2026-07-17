@@ -19,11 +19,11 @@ This will download the best combined audio + video format by default. The result
 
 🛠️ Command to Download YouTube Video as MP4
 
-yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 "https://www.youtube.com/watch?v=VIDEO_ID"
+`yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 "https://www.youtube.com/watch?v=VIDEO_ID"`
 
 Replace the link with your actual video link, like this:
 
-yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 "https://www.youtube.com/watch?v=76dmpJ0FNjs"
+`yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 "https://www.youtube.com/watch?v=76dmpJ0FNjs"`
 
 🔍 What This Does:
 
@@ -35,16 +35,16 @@ yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 "h
 
 📂 Optional: Download to a Specific Folder
 
--o "~/Downloads/%(title)s.%(ext)s"
+`-o "~/Downloads/%(title)s.%(ext)s"`
 
 This puts it in your Downloads folder with the video title as the filename:
 
-yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 -o "~/Downloads/%(title)s.%(ext)s" "https://www.youtube.com/watch?v=76dmpJ0FNjs"
+`yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --merge-output-format mp4 -o "~/Downloads/%(title)s.%(ext)s" "https://www.youtube.com/watch?v=76dmpJ0FNjs"`
 
 ⸻
 
 💡 Bonus: If the video doesn’t have MP4 streams
 
-If YouTube doesn’t serve an MP4 stream at your requested quality, yt-dlp will fall back to .webm + .m4a, and still convert it into .mp4 using ffmpeg (which you’ve now installed).
+If YouTube doesn’t serve an MP4 stream at your requested quality, yt-dlp will fall back to .webm + .m4a, and still convert it into .mp4 using ffmpeg (which you have to install separately).
 
 ⸻

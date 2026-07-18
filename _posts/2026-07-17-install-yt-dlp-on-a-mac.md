@@ -5,7 +5,7 @@ date: 2026-07-17
 category: Macbook
 ---
 
-yt-dlp lets you download audio and/or video from long YouTube videos — safely, cleanly, and without restrictions.
+[yt-dlp](https://github.com/yt-dlp/yt-dlp/) lets you download audio and/or video from long YouTube videos — safely, cleanly, and without restrictions.
 
 ⸻
 

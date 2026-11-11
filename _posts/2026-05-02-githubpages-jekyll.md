@@ -45,7 +45,9 @@ This page was built with **Jekyll** on **GitHub Pages** — no terminal!
 Commit, then refresh your site URL. (Small publishes may also take a few minutes.)
 
 ## Frontmatter
-https://jekyllrb.com/docs/front-matter/
+[https://jekyllrb.com/docs/front-matter/]
+
+Jekyll can render ordinary HTML inside a Markdown post.
 
 ## Liquid
 https://jekyllrb.com/docs/liquid/
@@ -71,9 +73,14 @@ title: My Post
 ---
 ```
 
+### How to create a post
+Put YAML front matter and Markdown headings at the top of a file.
+Markdown is a minimalist syntax for formatting posts.
+For more customization, you can add HTML, CSS, and JavaScript below the YAML front matter and Markdown headings.
+
 ### Markdown (.md)
 
-Use `<!-- -->` HTML comment syntax 
+Use `<!-- -->` HTML comment syntax.
 
 ```
 <!-- This is a comment and won't appear when rendered -->

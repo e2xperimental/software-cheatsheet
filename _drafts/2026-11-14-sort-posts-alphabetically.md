@@ -20,7 +20,7 @@ In [`index.md`](https://github.com/e2xperimental/finance/blob/main/index.md), so
 
 The code-search results may be incomplete. [View more matching code in the GitHub UI](https://github.com/e2xperimental/finance/search?q=category&type=code).
 
-
+## In the posts folder, do I still have to put the date at the beginning of each file name?
 
 
 Yes—keep the `YYYY-MM-DD-` prefix for files in `_posts`, for example:

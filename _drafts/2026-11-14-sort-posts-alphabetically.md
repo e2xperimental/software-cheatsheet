@@ -5,6 +5,24 @@ date: 2026-11-14 7:36:00 -0000
 category: Jekyll
 ---
 
+In [`index.md`](https://github.com/e2xperimental/finance/blob/main/index.md), sort each category’s posts by title before looping over them. Replace the inner loop with:
+
+```liquid
+{% assign posts = category[1] | sort_natural: "title" %}
+{% for post in posts %}
+  <li>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+```
+
+`sort_natural` sorts titles alphabetically without treating uppercase and lowercase as different. This changes the order of posts **within each category**; it doesn’t change the order of the categories themselves. Your site uses Jekyll posts in `site.categories` here, rather than standalone pages.
+
+The code-search results may be incomplete. [View more matching code in the GitHub UI](https://github.com/e2xperimental/finance/search?q=category&type=code).
+
+
+
+
 Yes—keep the `YYYY-MM-DD-` prefix for files in `_posts`, for example:
 
 ```text

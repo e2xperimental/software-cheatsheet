@@ -1,0 +1,48 @@
+---
+layout: post
+title: Trim the beginning of an .mp3
+date: 2026-11-15 10:00:00 -0000
+category: FFMPEG
+---
+
+## Can you trim the beginning of a .mp3 file with ffmpeg?
+
+Absolutely! You can use FFmpeg to remove the beginning of an MP3 file, either without re-encoding or with precise trimming.
+
+### Method 1: Trim without re-encoding (fastest)
+
+For example, to remove the first 15 seconds:
+
+```bash
+ffmpeg -ss 15 -i input.mp3 -c copy output.mp3
+```
+
+* `-ss 15` = start at 15 seconds.
+
+* `-i input.mp3` = original file.
+
+* `-c copy` = no re-encoding, preserving audio quality.
+
+* `output.mp3` = trimmed file.
+
+### Method 2: More precise trimming
+
+If you want a more accurate starting point, re-encode the audio:
+
+```bash
+ffmpeg -i input.mp3 -ss 15 -c:a libmp3lame -q:a 2 output.mp3
+```
+
+This uses high-quality variable bitrate MP3 encoding.
+
+### Bonus: Trim using minutes and seconds
+
+You can specify timestamps like this:
+
+```bash
+ffmpeg -ss 00:01:30 -i input.mp3 -c copy output.mp3
+```
+
+This removes the first 1 minute and 30 seconds.
+
+My recommendation: Use Method 1 for most situations. It's fast and doesn't degrade audio quality. For frame-accurate audio editing, use Method 2.
